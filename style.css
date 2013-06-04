@@ -1,0 +1,41 @@
+h1 {
+	margin: 30px auto;
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+body {
+	font-family: helvetica;
+}
+
+.balance {
+	text-align: center;
+}
+
+.bank {
+	border: 2px solid black;
+	border-radius: 5px;
+	margin-top: 50px;
+	padding: 0 20px 20px 20px;
+
+}
+
+#checking {
+	float: left;
+	margin-left: 200px;
+}
+
+#savings {
+	float: right;
+	margin-right: 200px;
+}
+
+.image {
+	/*float: clear;*/
+	margin: 20px auto;
+	text-align: center;
+}
+

@@ -3,14 +3,16 @@
 <head>
 		<script src="js/jquery.js"></script>
 		<script src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
   <h1>Bank of WDI</h1>
 <!-- CHECKING -->
-  <div id="bank">
+  <div class="bank" id="checking">
   	<h2>Checking</h2>
-    <h3 id="balance">Balance is $<span id="checking_balance">1000</span>.</h3>
+   
+    <h3 class="balance">Balance: $<span id="checking_balance">1000</span></h3>
   	<form id="withdraw_checking_button">
   		<input id="withdraw_checking" type="text">
   		<button>Withdraw</button>
@@ -22,9 +24,10 @@
     </form>
   </div>
 <!-- SAVINGS -->
-  <div id="bank">
+  <div class="bank" id="savings">
     <h2>Savings</h2>
-    <h3 class="balance">Balance is $<span id="savings_balance">1000</span>.</h3>
+<!--     <h2><span id="overdraft"></span></h2> -->
+    <h3 class="balance">Balance: $<span id="savings_balance">1000</span></h3>
     <form id="withdraw_savings_button">
       <input id="withdraw_savings" type="text">
       <button>Withdraw</button>
@@ -35,6 +38,13 @@
       <button>Deposit</button>
     </form>
   </div>
+
+  <div class="image">
+    <img src="http://media.washingtonpost.com/wp-srv/liveonline/images/celebritology/08/monopoly_man.jpg"/>
+  </div>
+
+ <h2><span id="overdraft"></span></h2>
+
 </body>
 
 </html>

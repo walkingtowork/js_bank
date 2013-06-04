@@ -9,10 +9,27 @@ $(document).ready(function(){
 
   // WITHDRAWL
 
-  function calculate_checking_withdrawl(event){
+  function calculate_checking_withdrawl(event) {
     var withdrawl = parseInt($("#withdraw_checking").val());
     var balance = parseInt($("#checking_balance").text());
     var balance = balance - withdrawl;
+    var savings_balance = parseInt($("#savings_balance").text());
+
+    if (balance < 0) {
+      $("h3").css("background-color", "red");
+      $("#overdraft").text("WARNING: You have overdrawn your account!");
+      var overdraft = balance;
+      var savings_balance = savings_balance + overdraft;
+      balance = 0;
+      if (savings_balance < 0) {
+        savings_balance = savings_balance + withdrawl;
+      }
+      var savings_balance = $("#savings_balance").text(savings_balance);
+      var checking_balance = $("#checking_balance").text(balance);
+      // OVERDRAFT
+
+
+    }
     var checking_balance = $("#checking_balance").text(balance);
 
     event.preventDefault();
@@ -22,8 +39,15 @@ $(document).ready(function(){
     var withdrawl = parseInt($("#withdraw_savings").val());
     var balance = parseInt($("#savings_balance").text());
     var balance = balance - withdrawl;
-    var savings_balance = $("#savings_balance").text(balance);
+    //OVERDRAFT
+    if (balance < 0) {
+      balance = balance + withdrawl;
+      $("h3").css("background-color", "red");
+      $("#overdraft").text("WARNING: You have overdrawn your account!");
+    }
 
+  
+    var savings_balance = $("#savings_balance").text(balance);
     event.preventDefault();
   }
 
