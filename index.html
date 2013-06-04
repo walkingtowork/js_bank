@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<script src="js/jquery.js"></script>
+		<script src="js/script.js"></script>
+</head>
+
+<body>
+  <h1>Bank of WDI</h1>
+<!-- CHECKING -->
+  <div id="bank">
+  	<h2>Checking</h2>
+    <h3 id="balance">Balance is $<span id="checking_balance">1000</span>.</h3>
+  	<form id="withdraw_checking_button">
+  		<input id="withdraw_checking" type="text">
+  		<button>Withdraw</button>
+  	</form>
+
+    <form id="deposit_checking_button">
+      <input id="deposit_checking" type="text">
+      <button>Deposit</button>
+    </form>
+  </div>
+<!-- SAVINGS -->
+  <div id="bank">
+    <h2>Savings</h2>
+    <h3 class="balance">Balance is $<span id="savings_balance">1000</span>.</h3>
+    <form id="withdraw_savings_button">
+      <input id="withdraw_savings" type="text">
+      <button>Withdraw</button>
+    </form>
+
+    <form id="deposit_savings_button">
+      <input id="deposit_savings" type="text">
+      <button>Deposit</button>
+    </form>
+  </div>
+</body>
+
+</html>
+
+<!-- 1. Checking Overdraft Protection
+2. No Savings -> Overdraft Protection
+3. $0 balance -> red background
+4. If insufficient total funds, do not allow withdrawl
+
+Withdraw/deposit money between Checking and Saving, display balance in each -->
